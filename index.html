@@ -183,62 +183,21 @@
             </div>
         </aside>
 
-        <!-- BOOK CONTENT PANEL CONTAINER -->
-        <main id="content-pane" class="flex-1 px-4 sm:px-8 md:px-16 lg:px-24 py-12 max-w-4xl mx-auto overflow-hidden">
-            
-           <!-- BOOK COVER VIEW SECTION -->
+       <!-- BOOK COVER VIEW SECTION -->
 <section id="cover" class="min-h-[75vh] flex flex-col justify-center items-center text-center py-8 mb-16 border-b border-stone-200 dark:border-zinc-800 fade-in">
-    
-    <!-- Wrapper for the video and the button -->
-    <div id="video-container" class="w-64 sm:w-80 shadow-2xl rounded-lg overflow-hidden border border-stone-200 dark:border-zinc-800 transition-transform duration-500 hover:scale-[1.02] mb-8 relative cursor-pointer">
-
+    <div class="w-64 sm:w-80 shadow-2xl rounded-lg overflow-hidden border border-stone-200 dark:border-zinc-800 transition-transform duration-500 hover:scale-[1.02] mb-8">
         <video 
-            id="cover-video"
-            src="https://donfaruk19.github.io/unspoken_love/vcover.mp4" 
-            class="w-full aspect-[2/3] object-cover" 
+            src="cover.mp4" 
+            alt="The Unspoken Love Book Cover"
+            class="w-full h-auto object-cover"
+            autoplay 
             loop 
+            muted 
             playsinline
-            poster="1000456964.jpg">
-            Your browser does not support the video tag.
+            poster="cover.jpg">  <!-- fallback poster image -->
         </video>
-
-        <!-- Play Button Overlay -->
-        <div id="play-btn" class="absolute inset-0 flex items-center justify-center bg-black/30 transition-opacity duration-300">
-            <svg class="w-16 h-16 text-white opacity-80" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z" />
-            </svg>
-        </div>
-
     </div>
 </section>
-
-<script>
-    const video = document.getElementById('cover-video');
-    const playBtn = document.getElementById('play-btn');
-    const container = document.getElementById('video-container');
-
-    // Function to handle play/pause
-    const toggleVideo = () => {
-        if (video.paused) {
-            video.play();
-            playBtn.style.opacity = '0';            // Hide button
-            playBtn.style.pointerEvents = 'none';   // Disable clicks on button
-        } else {
-            video.pause();
-            playBtn.style.opacity = '1';            // Show button
-            playBtn.style.pointerEvents = 'auto';   // Enable clicks
-        }
-    };
-
-    // Attach click listener to the container
-    container.addEventListener('click', toggleVideo);
-
-    // Optional: If video ends, show button again
-    video.addEventListener('ended', () => {
-        playBtn.style.opacity = '1';
-        playBtn.style.pointerEvents = 'auto';
-    });
-</script>
 
                 <h1 class="font-display text-4xl sm:text-6xl font-bold tracking-tight text-amber-800 dark:text-amber-500 mt-2 mb-4">The Unspoken Love</h1>
                 <p class="text-xl italic text-stone-500 dark:text-zinc-400 max-w-lg mb-4">A profound journey of resilience, duty, and the quiet dignity of a heart transformed by unrequited love.</p>
