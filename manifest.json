@@ -1,0 +1,16 @@
+{
+  "name": "The Unspoken Love",
+  "short_name": "UnspokenLove",
+  "description": "An interactive eBook by A.U.F Fikr",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#f5f5f4",
+  "theme_color": "#d97706",
+  "icons": [
+    {
+      "src": "IMG-20250314-WA0003.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    }
+  ]
+}
